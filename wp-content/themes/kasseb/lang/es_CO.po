@@ -1,0 +1,153 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: huespediacapital\n"
+"POT-Creation-Date: 2020-10-04 20:10-0500\n"
+"PO-Revision-Date: 2020-10-04 20:11-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_CO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: footer.php:7
+msgid "Get in"
+msgstr "Mantenerse en"
+
+#: footer.php:7
+msgid "touch"
+msgstr "contacto"
+
+#: footer.php:17
+msgid "Name"
+msgstr "Nombre"
+
+#: footer.php:18
+msgid "E-mail"
+msgstr "Email"
+
+#: footer.php:21
+msgid "Phone"
+msgstr "Teléfono"
+
+#: footer.php:22
+msgid "SEND"
+msgstr "ENVIAR"
+
+#: footer.php:52
+msgid "All rights reserved"
+msgstr "Todos los derechos reservados"
+
+#: lang/traslations.php:2
+msgid "MARKET PLACE"
+msgstr "OFERTAS"
+
+#: lang/traslations.php:3
+msgid "RAISER CAPITAL"
+msgstr "INVERSIONES"
+
+#: lang/traslations.php:4
+msgid "RESOURCES"
+msgstr "RECURSOS"
+
+#: lang/traslations.php:5
+msgid "Company News"
+msgstr "Noticias"
+
+#: lang/traslations.php:6
+msgid "Help Center"
+msgstr "Ayuda"
+
+#: lang/traslations.php:8
+msgid "Terms & Conditions"
+msgstr "Términos y Condiciones"
+
+#: lang/traslations.php:9
+msgid "Privacy Policy"
+msgstr "Política de Privacidad"
+
+#: lang/traslations.php:10
+msgid "FAQ"
+msgstr "Preguntas Frecuentes"
+
+#: lang/traslations.php:11
+msgid "About Us"
+msgstr "Sobre Nosotros"
+
+#: module/helpers/mail.php:47
+msgid "Password Reset"
+msgstr "Recuperación de Contraseña"
+
+#: module/helpers/mail.php:54
+msgid "We have received a request for resetting your password"
+msgstr "Hemos recibido una solicitud para restablecer tu contraseña"
+
+#: module/helpers/mail.php:59
+msgid "To reset your password please click on the link below"
+msgstr ""
+"Para restablecer tu contraseña por favor haz click en el siguiente enlace"
+
+#: module/helpers/mail.php:64
+msgid ""
+"If you think this an error or you did not request this, just ignore this "
+"message and nothing will happen."
+msgstr ""
+"Si crees que fue un error o no solicitaste el restablecimiento de tu "
+"contraseña, solo ignora este mensaje y nada sucederá."
+
+#: module/helpers/translations.php:19
+msgid "SENDING"
+msgstr "ENVIANDO"
+
+#: module/helpers/translations.php:20
+msgid "Sent email failed. Try again later"
+msgstr "No se ha podido enviar el mensaje. Intenta mas tarde"
+
+#: module/helpers/translations.php:21
+msgid "Contact sent!."
+msgstr "Formulario enviado correctamente."
+
+#: module/helpers/translations.php:22
+msgid "LOADING ..."
+msgstr "CARGANDO …"
+
+#: module/helpers/translations.php:23
+msgid "The passwords you have entered are not equals. Please review them."
+msgstr ""
+"Las contraseñas que ingresaste no son iguales. Por favor revísalas."
+
+#: templates/list-entries.php:30
+msgid "Read More"
+msgstr "Leer Más"
+
+#: templates/navigation.php:48
+msgid "Hi"
+msgstr "Hola"
+
+#: templates/navigation.php:51
+msgid "My Account"
+msgstr "Mi Cuenta"
+
+#: templates/navigation.php:52
+msgid "Refer a Friend"
+msgstr "Referir a un amigo"
+
+#: templates/navigation.php:53
+msgid "Logout"
+msgstr "Cerrar Sesión"
+
+#: templates/navigation.php:58
+msgid "SIGN UP"
+msgstr "REGISTRO"
+
+#: templates/navigation.php:61
+msgid "LOG IN"
+msgstr "INGRESO"
+
+#~ msgid "Hola"
+#~ msgstr "Hola"
