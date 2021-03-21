@@ -14,6 +14,7 @@ require( 'helpers/translations.php' );
 require( 'helpers/mail.php' );
 require( 'helpers/user.php' );
 require( 'models/post.php' );
+require( 'deals/deal.php' );
 
 /**
  * Class Kasseb
@@ -24,6 +25,9 @@ class Kasseb {
 	 *  Initialize Global Kasseb Module.
 	 */
 	public static function init() {
+		// Init Submodules
+		self::init_submodules();
+
 		// Registering Custom Menus
 		self::register_menus();
 
@@ -46,6 +50,13 @@ class Kasseb {
 		if ( ! current_user_can('manage_options') ) {
 			add_filter( 'show_admin_bar', '__return_false' );
 		}
+	}
+
+	/**
+	 * Assets.
+	 */
+	public static function init_submodules() {
+		Kasseb_Deal::init();
 	}
 
 	/**
