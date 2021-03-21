@@ -64,51 +64,255 @@ $data['footer_logos']    = get_field('footer_logos');
     <div class="row col-xs-12 col-md-8 offset-md-2">
         <p class="card-p"><?php echo $data['oportunities_text']; ?></p>
     </div>
-    <div class="row ancho">
+    <div class="row center d-none d-md-block">
         <div class="col-xs-12">
-            <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: grey">
+            <div id="carouselExampleIndicators1" class="carousel slide carusel-color" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active"> <img class="d-bloc img-fluid" src="/wp-content/themes/kasseb/assets/images/home2.jpg" alt="First slide">
-                        <div class="carousel-caption">
-                            <p class="carrusel-p">Cartagena, Colombia</p>
-                            <br>
-                            <p class="carrusel-p">NOMBRE DEL PROYECTO</p>
-                            <p class="carrusel-p">PROJECTED ROI:                     13%</p>
-                            <p class="carrusel-p">PROJECTED IRR:           16% - 19%</p>
-                            <p class="carrusel-p">MINIMUM INVESTEMENT: 50.000</p>
-                            <button type="button" class="btn-carrusel btn-sm">SEE MORE</button>
+                    <h3 class="h3" style="text-align: center; color: #fff">featured  <span class="yellow">deals </span></h3>
+                    <hr>
+                    <br>
+                    <div class="carousel-item active"> 
+                        <div class="row col-xs-12 col-sm-10 offset-sm-1">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-md-4 ">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="carousel-item"> <img class="d-block img-fluid" src="/wp-content/themes/kasseb/assets/images/home3.jpg" alt="Second slide">
-                        <div class="carousel-caption">
-                            <p class="carrusel-p">Cartagena, Colombia</p>
-                            <br>
-                            <p class="carrusel-p">NOMBRE DEL PROYECTO</p>
-                            <p class="carrusel-p">PROJECTED ROI:                     13%</p>
-                            <p class="carrusel-p">PROJECTED IRR:           16% - 19%</p>
-                            <p class="carrusel-p">MINIMUM INVESTEMENT: 50.000</p>
-                            <button type="button" class="btn-carrusel btn-sm">SEE MORE</button>
+                    <div class="carousel-item">
+
+                        <div class="row col-xs-12 col-sm-10 offset-sm-1">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-md-4 ">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="carousel-item"> <img class="d-block img-fluid" src="/wp-content/themes/kasseb/assets/images/home4.jpg" alt="Third slide">
-                        <div class="carousel-caption">
-                            <p class="carrusel-p">Cartagena, Colombia</p>
-                            <br>
-                            <p class="carrusel-p">NOMBRE DEL PROYECTO</p>
-                            <p class="carrusel-p">PROJECTED ROI:                     13%</p>
-                            <p class="carrusel-p">PROJECTED IRR:           16% - 19%</p>
-                            <p class="carrusel-p">MINIMUM INVESTEMENT: 50.000</p>
-                            <button type="button" class="btn-carrusel btn-sm">SEE MORE</button>
+                    <div class="carousel-item">
+
+                        <div class="row col-xs-12 col-sm-10 offset-sm-1">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-md-4 ">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
             </div>
+
+        </div>
+    </div>
+
+    <div class="row center d-block d-sm-block d-md-none">
+        <div class="col-xs-12">
+            <div id="carouselExampleIndicators" class="carousel slide carusel-color" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <h3 class="h3" style="text-align: center; color: #fff">feautured  <span class="yellow">deals </span></h3>
+                    <hr>
+                    <br>
+                    <div class="carousel-item active"> 
+                        <div class="row col-xs-12 col-sm-10 offset-sm-1">
+                            <div class="col-12">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div> 
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="row col-xs-12 col-sm-10 offset-sm-1">
+                            <div class="col-12">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div> 
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="row col-xs-12 col-sm-10 offset-sm-1">
+                            <div class="col-12">
+                                <div class="">
+                                    <img class="img-fluid" src="/wp-content/themes/kasseb/assets/images/market.jpg" alt="Card image cap">
+                                    <div class="card-body-c">
+                                        <p class="p-market">Cartagena · Colombia</p>
+                                        <h4 class="card-h4-market">NOMBRE DEL PROYECTO</h4>
+
+                                        <p class="p2-market">HUESPEDIA INVESTMENTS </p>
+                                        <p class="p2-market">Targeted Investors IRR                    <span class="derecha"> 12.99% </span> </p>
+                                        <p class="p2-market">Targeted Equity Multiple                  <span class="derecha"> 2.1x </span></p>
+                                        <p class="p2-market">Targeted Average Cash Yield                   <span class="derecha"> 7.2x </span></p>
+                                        <p class="p2-market">Targeted Investment Period                <span class="derecha"> 7years </span></p>
+                                    </div>
+                                </div>
+                            </div> 
+
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+            </div>
+
         </div>
     </div>
     <div class="footer-logos row gris">
