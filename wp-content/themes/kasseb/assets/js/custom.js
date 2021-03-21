@@ -16,6 +16,11 @@ jQuery( document ).ready(function() {
 
     // Adding listener for submit new password form
     jQuery(document).on( 'submit', 'form#set-password-form', sendNewPassword );
+    
+    // Adding listener for 
+    jQuery(document).on( 'click', '#close-button', function(){
+    	jQuery('div#check').remove();
+    });
 });
 
 function init(){
@@ -75,7 +80,7 @@ function sendContact(e){
     	submit.html(submit.data('copy'));
     	if(res.data == '1'){
 			jQuery(self).find('input.form-control').clear();
-			alert( KASSEB_LANG.SUCCESS_SEND_CONTACT_FORM );
+			showSuccessContactAlert( KASSEB_LANG.SUCCESS_SEND_CONTACT_FORM );
         }else{
             alert( KASSEB_LANG.FAILED_SEND_CONTACT_FORM+"." );
         }
@@ -119,4 +124,18 @@ function sendNewPassword(e){
         jQuery(this).find("input[name='password']").focus();
         e.preventDefault();
     }
+}
+
+function showSuccessContactAlert( text ){
+	jQuery('body').append('\
+		<div class="pop-up-check" id="check">\
+		    <div class="content">\
+				<img class="img-check" src="/wp-content/themes/kasseb/assets/images/pop-up.png" alt="check">\
+		        <div class="content-text">\
+					<h1>Thank You.</h1>\
+					<p>Your message has been received and we will <br> be contacting you shortly to follow-up.</p>\
+		        </div>\
+		        <div class="content-buttons"><a href="javascript:void(0);" id="close-button">Agree</a></div>\
+		    </div>\
+		</div>');
 }
