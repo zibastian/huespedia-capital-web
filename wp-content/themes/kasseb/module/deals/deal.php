@@ -10,13 +10,15 @@ defined( 'ABSPATH' ) || exit;
  */
 class Kasseb_Deal {
 
-	//const FRONT_PATH  = get_template_directory_uri().'/module/deals';
-	//const SERVER_PATH = get_template_directory().'/module/deals';
+	static $FRONT_PATH;
+	static $SERVER_PATH;
 
 	/**
 	 *  Initialize Module Kasseb_Deal.
 	 */
 	public static function init() {
+		static::$FRONT_PATH  = get_template_directory_uri().'/module/deals';
+		static::$SERVER_PATH = get_template_directory().'/module/deals';
 		// Hook wp_enqueue_scripts
 		//add_action( 'wp_enqueue_scripts', 'Kasseb_Deal::enqueue_assets', 1000 );
 
@@ -25,6 +27,17 @@ class Kasseb_Deal {
 
 		// Register Custom Taxonomies
 		self::register_taxonomies();
+
+		// Hook for init
+		add_action( 'wp_enqueue_scripts', 'Kasseb_Deal::checkLoggedUser' );
+	}
+
+	public static function checkLoggedUser(){
+		global $post;
+		if( !is_user_logged_in() && $post->post_type == 'deal' ){
+			wp_redirect( home_url( 'login' ) );
+			exit;
+		}
 	}
 
 	/**
@@ -73,7 +86,7 @@ class Kasseb_Deal {
 	        'publicly_queryable' => true,
 	        'show_ui' => true,
 	        'query_var' => true,
-	        'rewrite' => array('slug' => 'deals'),
+	        'rewrite' => array('slug' => 'deals','with_front' => false),
 	        'capability_type' => 'post',
 	        'hierarchical' => false,
 	        'menu_position' => null,
@@ -95,7 +108,7 @@ class Kasseb_Deal {
 	            'label' => 'Location',
 	            'query_var' => true,
 	            'rewrite' => array(
-	                'slug' => 'deals',
+	                'slug' => 'deals/location',
 	                'with_front' => false
 	            )
 	        )  
@@ -103,13 +116,32 @@ class Kasseb_Deal {
 	}
 
 	/**
+     * Retrieve post's list
+     *
+     * @return array
+     */
+    public static function get_deals( $args=array() ) {
+    	$args = wp_parse_args(
+			$args,
+			array(
+				'post_type'      => 'deal',
+				'post_status'    => 'publish',
+				'orderby'        => 'date',
+				'order'          => 'DESC',
+				'posts_per_page' => 4,
+	        	'paged'          => 1
+			)
+		);
+    	return new WP_Query( $args );
+    }
+
+	/**
 	 * Function for rendering Tarot Play
 	 */
-	public static function render_tarot_play() {
-		self::enqueue_assets();
+	public static function render_deal_detail($deal) {
 		$vars = array(
-	  		'course_id'     => "234"
+	  		'deal' => $deal
 	  	);
-	  	//Kasseb_Render::render_template(KASSEB_TAROT_PLAY_SERVER_PATH."/templates/tarot.tpl.php",$vars);
+	  	Kasseb_Render::render_template(static::$SERVER_PATH."/templates/single.tpl.php",$vars);
 	}
 }

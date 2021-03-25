@@ -13,6 +13,7 @@ require( 'helpers/menu.php' );
 require( 'helpers/translations.php' );
 require( 'helpers/mail.php' );
 require( 'helpers/user.php' );
+require( 'helpers/render.php' );
 require( 'models/post.php' );
 require( 'deals/deal.php' );
 
@@ -205,6 +206,9 @@ class Kasseb {
 	        if( $_POST['type'] == 'load-more-entries' ){
 	        	self::ajax_load_more_entries();
 	        }
+	        if( $_POST['type'] == 'load-more-deals' ){
+	        	self::ajax_load_more_deals();
+	        }
 	        echo '{"message":"Función no reconocida."}';
 	    }else{
 	    	echo '{"message":"Función no definida."}';
@@ -222,6 +226,9 @@ class Kasseb {
 	        }
 	        if( $_POST['type'] == 'load-more-entries' ){
 	        	self::ajax_load_more_entries();
+	        }
+	        if( $_POST['type'] == 'load-more-deals' ){
+	        	self::ajax_load_more_deals();
 	        }
 	        echo '{"message":"Función no reconocida."}';
 	    }else{
@@ -271,6 +278,24 @@ class Kasseb {
 			'entries'  => $entries,
 			'category' => $category,
 			'page'     => $page
+		));
+		die();
+	}
+
+	/**
+	 * Kasseb Ajax Process for rendering deals paginated
+	 */
+	public static function ajax_load_more_deals(){
+		$page = $_POST['page'];
+
+		// Getting entries and retrieving html
+		$args = array();
+		if( $page ) $args['paged'] = $page;
+		$items = Kasseb_Deal::get_deals( $args );
+
+		get_template_part( 'module/deals/templates/market-place', '', array(
+			'items' => $items,
+			'page'  => $page
 		));
 		die();
 	}

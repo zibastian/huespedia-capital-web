@@ -12,7 +12,10 @@ jQuery( document ).ready(function() {
     jQuery('li.tablinks[data-id="0"]').click();
 
     // Adding listener for load more button in Posts Categories display
-    jQuery(document).on( 'click', '.kasseb-load-more button.load-more-button', loadMoreEntries );
+    jQuery(document).on( 'click', 'body.page-template-list-entries-template .kasseb-load-more button.load-more-button', loadMoreEntries );
+
+    // Adding listener for load more button in MarketPlace
+    jQuery(document).on( 'click', 'body.page-template-market-place-template .kasseb-load-more button.load-more-button', loadMoreDeals );
 
     // Adding listener for submit new password form
     jQuery(document).on( 'submit', 'form#set-password-form', sendNewPassword );
@@ -108,6 +111,25 @@ function loadMoreEntries(e){
     formdata.append('action'   , 'kasseb');
     formdata.append('type'     , 'load-more-entries');
     formdata.append('category' , jQuery(this).data('category'));
+    formdata.append('page'     , jQuery(this).data('page'));
+
+    var self = this;
+    KASSEB.sendWpAjaxHTMLRequest(formdata,function(res) {
+        jQuery('.kasseb-load-more').replaceWith(res);
+    },function(res) {
+        jQuery(self).html( jQuery(self).data('copy') );
+    });
+}
+
+function loadMoreDeals(e){
+	e.preventDefault();
+
+	jQuery(this).data( 'copy', jQuery(this).html() );
+	jQuery(this).html( KASSEB_LANG.LOADING_TEXT );
+
+	var formdata = new FormData();
+    formdata.append('action'   , 'kasseb');
+    formdata.append('type'     , 'load-more-deals');
     formdata.append('page'     , jQuery(this).data('page'));
 
     var self = this;
