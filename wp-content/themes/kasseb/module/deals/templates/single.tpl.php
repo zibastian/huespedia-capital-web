@@ -73,7 +73,7 @@ $documents = get_field('documents');
         	<?php } ?>
             <h3>QUESTIONS?</h3>
             <p>If you have questions, we're here to help. Send us a message below and we'll respond promptly</p>
-            <input id="questionText" class="cuadro-txt" type="text" name="nombredelacaja">
+            <textarea id="questionText" class="cuadro-txt" type="text" name="nombredelacaja"></textarea>
             <button id="sendQuestionDeal" type="button" class="btn-carrusel btn-sm">SEND QUESTION</button>
         </div>
     </div>
