@@ -212,6 +212,9 @@ class Kasseb {
 	        if( $_POST['type'] == 'send-question-deal' ){
 	        	self::ajax_send_question_deal();
 	        }
+	        if( $_POST['type'] == 'send-investment' ){
+	        	self::ajax_send_investment();
+	        }
 	        echo '{"message":"Función no reconocida."}';
 	    }else{
 	    	echo '{"message":"Función no definida."}';
@@ -283,6 +286,29 @@ class Kasseb {
 			'email'    => $user->user_email,
 			'url'      => $_SERVER['HTTP_REFERER'],
 			'question' => $question
+		));
+		if($sent) echo '{"data":"1"}';
+		else echo '{"data":"0"}';
+		die();
+	}
+
+	/**
+	 * Kasseb Ajax Process for Sending investment contact.
+	 */
+	public static function ajax_send_investment(){
+		$user = wp_get_current_user();
+
+		// Check all data available to proceed
+		if( $_SERVER['HTTP_REFERER'] == '' ){
+			echo '{"data":"0"}';
+			die();
+		}
+		// Send User Email
+		$sent = Kasseb_Mail::sendInvestment(array(
+			'fname'    => $user->first_name,
+			'lname'    => $user->last_name,
+			'email'    => $user->user_email,
+			'url'      => $_SERVER['HTTP_REFERER']
 		));
 		if($sent) echo '{"data":"1"}';
 		else echo '{"data":"0"}';

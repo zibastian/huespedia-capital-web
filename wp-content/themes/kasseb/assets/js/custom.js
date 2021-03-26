@@ -8,6 +8,9 @@ jQuery( document ).ready(function() {
     // Adding listener for submit questions on deal's page
     jQuery(document).on( 'click', 'button#sendQuestionDeal', sendQuestionDeal );
 
+    // Adding listener for submit questions on deal's page
+    jQuery(document).on( 'click', 'button#sendInvestment', sendInvestment );
+
     // Adding listener for Help Center
     jQuery(document).on( 'click', '.help-center li.tablinks', openQuestion );
 
@@ -118,6 +121,36 @@ function sendQuestionDeal(e){
     	submit.html(submit.data('copy'));
     	if(res.data == '1'){
 			jQuery('textarea#questionText').val('');
+			showSuccessContactAlert( KASSEB_LANG.SUCCESS_SEND_CONTACT_FORM );
+        }else{
+            alert( KASSEB_LANG.FAILED_SEND_CONTACT_FORM+"." );
+        }
+    },function(res) {
+        submit.removeClass('kasseb_disable_link');
+    	submit.html(submit.data('copy'));
+    	alert( KASSEB_LANG.FAILED_SEND_CONTACT_FORM );
+    });
+}
+
+function sendInvestment(e){
+	e.preventDefault();
+
+    var submit = jQuery(this);
+    if(submit.hasClass('kasseb_disable_link')) return;
+
+    submit.addClass('kasseb_disable_link');
+    submit.data( 'copy', submit.html() );
+    submit.html( KASSEB_LANG.SENDING_CONTACT_FORM+" ..." );
+
+    var formdata = new FormData();
+    formdata.append('action', 'kasseb');
+    formdata.append('type'  , 'send-investment');
+
+    var self = this;
+    KASSEB.sendWpAjaxJSONRequest(formdata,function(res) {
+        submit.removeClass('kasseb_disable_link');
+    	submit.html(submit.data('copy'));
+    	if(res.data == '1'){
 			showSuccessContactAlert( KASSEB_LANG.SUCCESS_SEND_CONTACT_FORM );
         }else{
             alert( KASSEB_LANG.FAILED_SEND_CONTACT_FORM+"." );

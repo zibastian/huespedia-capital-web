@@ -55,7 +55,7 @@ $documents = get_field('documents');
         <div class="col-xs-12 col-sm-4">
             <h3 class="dorado"><?php echo get_the_title(); ?></h3>
             <p class="p-deal"><?php echo get_field('description'); ?></p>
-            <button type="button" class="btn-deal btn-sm">INVEST NOW</button>
+            <button id="sendInvestment" type="button" class="btn-deal btn-sm">INVEST NOW</button>
             <div class="card-deal">
             	<?php foreach( $features as $feature ){ ?>
             	<p class="black"><strong><?php echo $feature[0]; ?>:</strong><span class="derecha"><?php echo $feature[1]; ?></span></p><br>

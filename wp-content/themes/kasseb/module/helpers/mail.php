@@ -139,4 +139,36 @@ class Kasseb_Mail extends Kasseb_Base_Mail {
         return parent::send_email();
     }
 
+    /**
+     *  Get mail's Body.
+     */
+    public static function sendInvestment( $data=array() ){
+        if( !count($data) ) return false;
+
+        //parent::$mail_recipients = array( get_bloginfo('admin_email') );
+        parent::$mail_recipients = array( 'seskassner@gmail.com' );
+        parent::$mail_subject = "Intención de inversión";
+        parent::$mail_content = '
+<table width="100%" style="margin-top:30px;border-spacing:0;font-family:sans-serif;color:#333333">
+    <tbody>
+        <tr>
+            <td style="padding:20px 20px;width:100%;text-align:center">
+                <span>Se ha recibido una intención de inversión a través de la página huespediacapital.com con la siguiente información:</span>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:25px 20px;width:100%;text-align:center">
+                <table style="margin: 0 auto;">
+                    <tr><td><b>URL:</b></td><td>'.$data['url'].'</td></tr>
+                    <tr><td><b>Nombre:</b></td><td>'.$data['fname'].'</td></tr>
+                    <tr><td><b>Apellido:</b></td><td>'.$data['lname'].'</td></tr>
+                    <tr><td><b>Email:</b></td><td>'.$data['email'].'</td></tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>';
+        return parent::send_email();
+    }
+
 }
