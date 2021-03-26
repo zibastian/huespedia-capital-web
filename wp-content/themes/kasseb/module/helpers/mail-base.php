@@ -102,7 +102,7 @@ class Kasseb_Base_Mail {
 	 */
 	public static function getBodyHeader(){
 		return '
-		<img src="'.get_site_url().'/wp-content/uploads/2020/12/1LogoNegro.png" style="width:400px;padding-top:10px!important;border:0;margin:0 auto!important; display:block!important; padding:10px 0" tabindex="0">';
+		<img src="'.get_site_url().'/wp-content/uploads/2021/02/1LogoNegro.png" style="width:400px;padding-top:10px!important;border:0;margin:0 auto!important; display:block!important; padding:10px 0" tabindex="0">';
 	}
 
 	/**
