@@ -145,8 +145,8 @@ class Kasseb_Mail extends Kasseb_Base_Mail {
     public static function sendInvestment( $data=array() ){
         if( !count($data) ) return false;
 
-        //parent::$mail_recipients = array( get_bloginfo('admin_email') );
-        parent::$mail_recipients = array( 'seskassner@gmail.com' );
+        parent::$mail_recipients = array( get_bloginfo('admin_email') );
+        //parent::$mail_recipients = array( 'seskassner@gmail.com' );
         parent::$mail_subject = "Intención de inversión";
         parent::$mail_content = '
 <table width="100%" style="margin-top:30px;border-spacing:0;font-family:sans-serif;color:#333333">
