@@ -43,11 +43,11 @@ global $KASSEB_RESET_CODE;
             <div class="form-footer">
                 <span class="message"><?php echo $KASSEB_RESET_MESSAGE; ?></span>
                 <button type="submit" class="btn-login btn-info-login">
-                    <span class="glyphicon glyphicon-log-in"></span> ENTER YOU EMAIL
+                    <span class="glyphicon glyphicon-log-in"></span> ENTER YOUR EMAIL
                 </button>
             </div>
 
-            <p class="center">If you requiere adicional help, please contact us <br> at XXXXX or XXXX@huespedia.com</p>
+            <p class="center">If you require additional help, please contact us <br> at info@huespediacapital.com</p>
             <?php } ?>
         </form>
         <?php } ?>
