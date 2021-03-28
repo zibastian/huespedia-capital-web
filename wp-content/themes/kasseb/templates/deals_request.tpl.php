@@ -21,13 +21,15 @@ if( $KASSEB_SEND_CONTACT == 2 ) $message = "Request couldn't be sent. Try again 
     <div class="col-xs-12 col-sm-6 formulario-login">
         <div class="signup-form-container">
 
-
-            <?php if( $KASSEB_SEND_CONTACT > 0 ){ ?>
-            <!-- form start -->
-            <form role="form" id="register-form" autocomplete="off">
-                <p style="text-align: center;"><?php echo $message; ?></p>
-            </form>
-            <?php } else { ?>
+            <?php if( $KASSEB_SEND_CONTACT == 2 ){ ?>
+            <script type="text/javascript">
+                alert("Request couldn't be sent. Try again later!");
+            </script>
+            <?php }else if( $KASSEB_SEND_CONTACT > 0 ){ ?>
+            <script type="text/javascript">
+                showSuccessContactAlert();
+            </script>
+            <?php } ?>
             <!-- form start -->
             <form role="form" id="register-form" autocomplete="off" method="POST">
 
@@ -96,7 +98,6 @@ if( $KASSEB_SEND_CONTACT == 2 ) $message = "Request couldn't be sent. Try again 
                 </div>
 
             </form>
-            <?php } ?>
 
         </div>
     </div>
