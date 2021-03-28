@@ -40,9 +40,7 @@ $user         = wp_get_current_user();
                 <a class="nav-link-s dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php echo wp_sprintf( '%s %s', __('Hi','kasseb'), $user->display_name ); ?>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown"> 
-                    <a class="dropdown-item" href="/profile"><?php echo __('My Account','kasseb') ?></a> 
-                    <a class="dropdown-item" href="/refer"><?php echo __('Refer a Friend','kasseb') ?></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/logout/"><?php echo __('Logout','kasseb') ?></a>
                 </div>
             </li>
