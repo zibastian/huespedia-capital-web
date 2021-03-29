@@ -5,11 +5,13 @@ $by_page  = $args['by_page'] ?? 4;
 $row      = 4;
 $category = $args['category'] ?? '';
 $page     = $args['page'] ?? 1;
-while ( $items->have_posts() ){
+?>
+
+<div class="row">
+<?php while ( $items->have_posts() ){
     $items->the_post();
     $locations = get_the_terms( get_the_ID(), "deal_location" );
 ?>
-<?php if( $index % $row == 0 ){ ?><div class="row"><?php } ?>
     <div class="col-md-3">
         <a href="<?php echo get_permalink(); ?>"><div class="">
             <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="Card image cap">
@@ -45,12 +47,13 @@ while ( $items->have_posts() ){
                 </p>
             </div>
         </div>
+        </a>
     </div>
-<?php if( $index % $row == $row-1 ){ ?></div><?php } ?>
 <?php 
     $index++;
 }
 ?>
+</div>
 <?php if( $items->post_count >= $by_page ){ ?>
 <div class="row text-center kasseb-load-more">
     <div class="col-xs-12 col-sm-10 offset-sm-1"><br>
