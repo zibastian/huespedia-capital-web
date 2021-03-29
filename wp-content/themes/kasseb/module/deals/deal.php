@@ -136,12 +136,28 @@ class Kasseb_Deal {
     }
 
 	/**
-	 * Function for rendering Tarot Play
+	 * Function for rendering Deal's Detail
 	 */
 	public static function render_deal_detail($deal) {
 		$vars = array(
 	  		'deal' => $deal
 	  	);
 	  	Kasseb_Render::render_template(static::$SERVER_PATH."/templates/single.tpl.php",$vars);
+	}
+
+	/**
+	 * Function for rendering Featured Deals
+	 */
+	public static function render_featured_deals() {
+		$items = get_posts(array(
+			'numberposts'	=> 9,
+			'post_type'		=> 'deal',
+			'meta_key'		=> 'featured',
+			'meta_value'	=> '1'
+		));
+		$vars = array(
+	  		'items' => $items
+	  	);
+	  	Kasseb_Render::render_template(static::$SERVER_PATH."/templates/featured-deals.tpl.php", $vars );
 	}
 }
