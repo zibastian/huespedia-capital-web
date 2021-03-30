@@ -18,7 +18,7 @@ $pages = ceil( count($items)/9 );
                 	<?php $locations = get_the_terms( $item->ID, "deal_location" ); ?>
 
                 <?php if( $index % 3 == 0 ){ ?>
-                <div class="carousel-item active"> 
+                <div class="carousel-item <?php echo !$index?'active':''; ?>"> 
                     <div class="row col-xs-12 col-sm-10 offset-sm-1">
                 <?php } ?>
 
@@ -64,7 +64,7 @@ $pages = ceil( count($items)/9 );
                 	</div> 
                 </div>
                 <?php } ?>
-            <?php $index++;} ?>
+            <?php $index++;}$index=0; ?>
 
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
@@ -89,7 +89,7 @@ $pages = ceil( count($items)/9 );
                 <?php foreach( $items as $item ){ ?>
                 	<?php $locations = get_the_terms( $item->ID, "deal_location" ); ?>
 
-                <div class="carousel-item active"> 
+                <div class="carousel-item <?php echo !$index?'active':''; ?>"> 
                     <div class="row col-xs-12 col-sm-10 offset-sm-1">
                         <div class="col-12">
                         	<a href="<?php echo get_permalink( $item->ID ); ?>">
@@ -130,7 +130,7 @@ $pages = ceil( count($items)/9 );
                         </div> 
                     </div>
                 </div>
-            	<?php } ?>
+            	<?php $index++;} ?>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
