@@ -21,8 +21,8 @@ get_header();
         <!-- form start -->
         <form role="form" id="register-form" autocomplete="off" method="POST">
             <div class="form-header">
-                <h3 class="sign">Sign in with <a href="#">Google</a></h3>
-                <p class="line">or</p>           
+                <h3 class="sign">Sign in with your account</h3>
+                <p class="line">-</p>           
                 <div class="pull-right">
                     <h3 class="form-title">
                     	<span class="glyphicon glyphicon-pencil"></span>
